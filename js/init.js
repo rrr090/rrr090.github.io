@@ -23,7 +23,7 @@ function Init() {
         var temporizador = setInterval(function() {
             carga += 5;
             medidorDeProgreso.style.width = carga + "%";
-
+r
             if (carga >= 100) {
                 clearInterval(temporizador);
                 Init_end();
