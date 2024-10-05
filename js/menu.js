@@ -67,5 +67,4 @@ function togglemenu() {
 }
 
 toggle_menu.addEventListener('click', togglemenu);
-document.getElementById('closeinfo').addEventListener('click', close_info);
 Update_celular();

@@ -24,31 +24,30 @@ function Init() {
             carga += 5;
             medidorDeProgreso.style.width = carga + "%";
 
-            r
             if (carga >= 100) {
                 clearInterval(temporizador);
                 Init_end();
             }
         }, 300); 
-    }, 800);
+    }, 800); 
 
 }
 
 function Init_end() {
-    
+
     var myElement = document.querySelector(".container-main");
-  
+   
     myElement.style.display = "none";
-    
+ 
     var myElement = document.querySelector(".scene-nav-menu");
-   
+
     myElement.style.display = "block";
-    
+
     var myElement = document.querySelector(".scene-title");
-  
+
     myElement.style.display = "block";
-   
+
     var myElement = document.getElementById("Exoplanet");
-   
+
     myElement.style.display = "block";
 }
