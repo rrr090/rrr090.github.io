@@ -14,7 +14,7 @@ body{
 }
 
 .inner{
-    font-family: "Space Grotesk", sans-serif;
+  
     opacity: 1; /* Opacity initiating */
     transition: opacity 0.8s ease; /* transition */
     overflow: hidden;
@@ -2944,7 +2944,7 @@ h1, h2, h3, h4, h5, h6 {
 .intro-heading {
     font-family: "Space Grotesk", sans-serif;
     text-transform: uppercase;
-    letter-spacing: 0.25rem;
+    letter-spacing: 0.12rem;
     text-align: center;
     padding-top: 2rem;
     margin: 0 2rem;
@@ -2993,6 +2993,9 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+.intro-screen {
+    text-align: center;                /* Центрируем текст внутри */
+}
 .intro-text p {
     font-size: 0.75rem;
     padding: 0 1rem;
