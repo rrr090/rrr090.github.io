@@ -33,6 +33,7 @@ body {
     font-size: 18px; /* Увеличенный размер шрифта на кнопке */
     color: #2ecc71; /* Зелёный текст */
     background-color: transparent;
+    font-family: "Bebas Neue", sans-serif;
     border: 2px solid #2ecc71; /* Зелёная обводка */
     border-radius: 10px;
     cursor: pointer;
