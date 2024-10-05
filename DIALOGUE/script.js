@@ -5,6 +5,11 @@ const dialogVideo = document.getElementById('dialog-video'); // Слот для 
 const videoSource = document.getElementById('video-source');
 const nextButton = document.getElementById('next-btn');
 const rocket = document.getElementById("character-image");
+const audio = document.getElementById('background-music'); // Получаем элемент audio
+const musicToggle = document.getElementById('music-toggle'); // Получаем кнопку
+const musicStatus = document.getElementById('music-status'); // Получаем текст статуса музыки
+const volumeSlider = document.getElementById('volume-slider'); // Получаем ползунок громкости
+
 
 // Массив с фразами диалога
 const dialogues = [
@@ -137,3 +142,31 @@ showNextDialogue();
 
 // Добавляем обработчик клика по кнопке
 nextButton.addEventListener('click', showNextDialogue);
+
+// Переменная для отслеживания состояния музыки
+let isMusicPlaying = false;
+
+// Функция для переключения музыки
+function toggleMusic() {
+    if (isMusicPlaying) {
+        audio.pause(); // Остановить музыку
+        musicStatus.textContent = 'Play Music'; // Изменить текст
+    } else {
+        audio.play(); // Запустить музыку
+        musicStatus.textContent = 'Pause Music'; // Изменить текст
+    }
+    isMusicPlaying = !isMusicPlaying; // Переключить состояние
+}
+
+// Добавляем обработчик события на кнопку
+musicToggle.addEventListener('click', toggleMusic);
+
+
+// Устанавливаем начальную громкость
+audio.volume = 1; // Уровень громкости от 0 до 1
+// Добавляем обработчик события для ползунка громкости
+volumeSlider.addEventListener('input', function() {
+    audio.volume = volumeSlider.value / 100; // Устанавливаем громкость от 0 до 1
+    document.getElementById('volume-value').textContent = `${volumeSlider.value}%`; // Обновляем отображаемое значение громкости
+});
+

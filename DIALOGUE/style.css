@@ -63,10 +63,93 @@ body {
     cursor: pointer;
     opacity: 1;
     transition: all 0.3s ease;
+} 
+
+ /* Основные стили для контейнера */
+ .volume-control {
+    position: fixed;
+    bottom: 50px; /* Высота от нижнего края */
+    right: 40px; /* Отступ от правого края */
+    display: flex; /* Flexbox для выравнивания элементов */
+    flex-direction: column; /* Вертикальная компоновка */
+    align-items: flex-start; /* Выравнивание по левому краю */
+    width: 150px; /* Фиксированная ширина для всех элементов */
 }
 
+/* Стили для надписи громкости */
+.volume-label {
+    font-size: 16px; /* Размер шрифта */
+    color: #2ecc71; /* Цвет ползунка */
+    font-weight: bold; /* Жирный шрифт */
+    margin-bottom: 5px; /* Отступ снизу */
+    text-align: left; /* Выравнивание по левому краю */
+}
 
+.volume-description {
+    font-size: 14px; /* Размер шрифта для описания */
+    color: #2ecc71; /* Цвет ползунка */
+    margin-bottom: 10px; /* Отступ снизу */
+    text-align: left; /* Выравнивание по левому краю */
+}
 
+/* Стили ползунка громкости */
+#volume-slider {
+    width: 100%; /* Ширина ползунка 100% от контейнера */
+    appearance: none; /* Убираем стандартный стиль ползунка */
+    background: transparent; /* Прозрачный фон */
+    outline: none; /* Убираем обводку при фокусе */
+    margin-bottom: 10px; /* Отступ снизу */
+}
+
+#volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Убираем стандартный стиль ползунка для Webkit браузеров */
+    appearance: none; /* Убираем стандартный стиль ползунка */
+    width: 15px; /* Ширина ползунка */
+    height: 15px; /* Высота ползунка */
+    border-radius: 50%; /* Круглая форма */
+    background: #2ecc71; /* Цвет ползунка */
+    cursor: pointer; /* Курсор при наведении */
+}
+
+#volume-slider::-moz-range-thumb {
+    width: 15px; /* Ширина ползунка */
+    height: 15px; /* Высота ползунка */
+    border-radius: 50%; /* Круглая форма */
+    background: #2ecc71; /* Цвет ползунка */
+    cursor: pointer; /* Курсор при наведении */
+}
+
+/* Стили для кнопки */
+.music-toggle {
+    width: 100%; /* Ширина кнопки 100% от контейнера */
+    padding: 10px;
+    font-size: 16px;
+    color: #2ecc71;
+    background-color: transparent;
+    border: 2px solid #2ecc71;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+    text-align: center; /* Центрирование текста */
+    margin-top: 15px; /* Увеличиваем отступ сверху */
+}
+.music-toggle:hover {
+    opacity: 1;
+}
+
+/* Убираем стиль ползунка при фокусе */
+#volume-slider:focus {
+    outline: none; /* Убираем обводку при фокусе */
+}
+
+/* Стили для отображения значения громкости */
+#volume-value {
+    font-size: 14px; /* Размер шрифта */
+    color: #2ecc71; /* Цвет ползунка */
+    text-align: left; /* Выравнивание по левому краю */
+    margin-bottom: 10px; /* Отступ снизу */
+}
 #next-btn:hover {
     background-color: #2ecc71;
     color: #fff;
