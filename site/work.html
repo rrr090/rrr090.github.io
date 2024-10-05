@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExoTaimas Exploration</title>
+    <link rel="stylesheet" href="/site/styles.css">
+    <link rel="stylesheet" href="/site/menu.css">
+    <link rel="stylesheet" href="/site/intro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/simplex-noise@2.4.0/simplex-noise.min.js"></script>
+    <script src="https://unpkg.com/globe.gl@2.32.1/dist/globe.gl.min.js"></script>
+    <script src="https://unpkg.com/d3-array@3.2.4/dist/d3-array.min.js"></script>
+    <script src="https://unpkg.com/three@0.160.0/build/three.js"></script>
+    <script src="https://unpkg.com/d3-scale@4.0.2/dist/d3-scale.min.js"></script>
+    <script src="/js/init.js"></script>                                <!--    <= INITIALISATION-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+          <!--Fire Cursor-->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+</head>
+<body>
+                <!-- VVEDENIE   -->
+<div class="container-main" style="z-index: 10;">
+    <div class="intro-screen">
+        <div class="intro-text">
+            <div class="intro-heading">
+                <h3>EXOEXOEXOEXO</h3>
+            </div>
+            <br>
+            <div class="inner">
+                
+                <p>GENERATEGENERATEGENERATEGENERATEGENERATEGENERATEGENERATEGENERATEGENERATEGENERATEGENERATE </p>
+                <br>
+                <div id="render-scene" class="button large render-scene" onclick = "Init()" >
+                    <span>GENERATEGENERATE</span>
+                </div>
+                                
+            </div>
+            <div id="loading-prompt" class="loading-prompt" style="display: none;">
+                <span>LOADING TAIMAS...</span>
+                <div id="realtime-updates"></div>
+                <div id="progress-bar" class="progress" role="progressbar" tabindex="0">
+                    <div class="progress-meter"></div>
+                </div>
+                <p><center><img src="/textures/taimas.png" alt="TAIMAS" width="300"  height="341"/></center></p>
+            </div>
+        </div>
+    </div>
+</div>
+                <!--   MENU -->
+    <div class="scene-nav-menu" style="display: none;">
+        <div id="botonmenu" name="botonmenu" class="menu-title">Menu   <div id="MenuClose" name="MenuClose" style="font-size: 1.5rem;position: absolute;top: 10px;right: 15px;">-</div></div>
+        <div id="menu" name="menu">
+        <ul class="accordion menu-list" role="tablist">
+            <!--SUBMENU 1-->
+            <li class="has-submenu">
+                <a id="tszcj3-accordion-label" class="accordion-title planet-name" data-id="1" aria-controls="tszcj3-accordion" role="tab" aria-expanded="false" aria-selected="false">Taimas Exploration</a>
+                <ul class="submenu">
+                    <li class="accordion-item">
+                        <div class="toggle-container">
+                            <p>Graticules</p>
+                            <label class="switch">
+                            <input id="toggle_Grat" type="checkbox">
+                            <span class="slider"></span>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="accordion-item">
+                        <div class="toggle-container">
+                            <p>Luminosity</p>
+                            <label class="switch">
+                            <input id="toggle_atmosphere" type="checkbox" style="display: inline-block;">
+                            <span class="slider"></span>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="accordion-item"></li>
+                        <div style="text-align: center; font-size: 15px; margin-bottom: -25px;">Temperature (K)</div>
+                        <div class="range">
+                            <input type="range" min="0" max="4000" value="0" id="ranTemp" />
+                        <div  style="font-size: 12px;" id="tempVal">0</div>
+                        </div>
+                              
+                    </li>
+                    <li class="accordion-item"></li>
+                        <div style="text-align: center; font-size: 15px; margin-bottom: -25px;">Luminosity Altitude</div>
+                        <div class="range">
+                            <input type="range" min="0" max="100" value="0" id="ranAlt" />
+                        <div  style="font-size: 12px;" id="altVal">0%</div>
+                        </div>
+                    </li>
+                    <li class="accordion-item"></li>
+                        <div style="text-align: center; font-size: 15px; margin-bottom: -25px;">Planet Size</div>
+                        <div class="range">
+                            <input type="range" min="1" max="10" value="8" id="ranSize" />
+                            <div  style="font-size: 12px;" id="sizeVal">8</div> <!-- 100-75 (2.5 is default)  -->
+                          </div>
+                              
+                    </li>
+                </ul>        
+            </li> 
+            <!-- SUBMENU 2-->
+            <li class="has-submenu">
+                <a id="tszcj3-accordion-label" class="accordion-title planet-name" data-id="1" aria-controls="tszcj3-accordion" role="tab" aria-expanded="false" aria-selected="false">Light Options</a>
+                <ul class="submenu">
+                    <li class="accordion-item">
+                        <div class="toggle-container">
+                            <p>Fully illuminated</p>
+                            <label class="switch">
+                            <input id="toggle_light" type="checkbox">
+                            <span class="slider"></span>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="accordion-item">
+                        <div style="text-align: center; font-size: 15px; margin-bottom: -25px;">Rotation exoplanet/star</div>
+                        <div class="range">
+                            <input type="range" min="0" max="360" value="0" id="rangeRotation" />
+                            <div  style="font-size: 12px;" id="valueRotation">0</div>°
+                          </div>
+                    </li>
+                    <li class="accordion-item">
+                        <div style="text-align: center; font-size: 15px; margin-bottom: -25px;">Velocity Rotation</div>
+                        <div class="range">
+                            <input type="range" min="0" max="2000" value="0" id="RANGEVELOCITY" />
+                            <div  style="font-size: 12px;" id="VALVELOCITY">0</div>
+                          </div>
+                    </li>
+                </ul>
+
+        
+            <div id="infoluna" name="infoluna" >
+            <li class="accordion-item">
+                <a id="accordion-label" class="accordion-title menu-name" role="tab" aria-expanded="false" aria-selected="false">Taimas Information</a>
+                <div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="33crh5-accordion-label" aria-hidden="false" id="33crh5-accordion" style="display: block;">
+                    <div class="label" for="exoTypeSelect">Choose the type of exoplanet:</div>
+                    <select id="exoTypeSelect">
+                        <option value="terrestial">Terrestial</option>
+                        <option value="gasGiant">Gas Giant</option>
+                        <option value="superEarth">Super-Earth</option>
+                        <option value="neptunian">Neptunian</option>
+                    </select>
+                    <div class="label" for="liquidSelect">Choose the main type of fluid on the exoplanet:</div>
+                    <select id="liquidSelect">
+                        <option value="Water">Water [H₂O]</option>
+                        <option value="ammonia">Ammonia [NH₃]</option> <!--NOT READY-->
+                        <option value="acid">Sulfuric Acid [H₂SO₄]</option>
+                        <option value="nitrogen">Liquid Nitrogen [N₂]</option>
+                        <option value="silicon">Molten Silicon [Si]</option>
+                    </select>
+                    <div class="label" for="SolidSelect">Choose the main type of solid on the exoplanet:</div>
+                    <select id="SolidSelect">
+                        <option value="carbon">Carbon [C]</option>
+                        <option value="silicon">Silicon [Si]</option> <!--NOT READY-->
+                        <option value="sulfur">Sulfur [S]</option>
+                        <option value="iron">Iron [Fe]</option>
+                        <option value="aluminium">Aluminium [Al]</option>
+                    </select>
+                </div>
+            </li>
+            </div>
+ 
+        </ul>
+        </div>
+      </div>
+
+
+      
+
+                    <!--   TITLE  -->
+<div id="title" name="title" class="scene-title" style="display: none;">Taimas Exploration</div>
+
+
+</div>
+
+                    <!--   EXOTAIMAS  -->
+<div id="Exoplanet" style="display: none;">
+</div>
+
+
+                    <!--   TAIMAS.PNG-->
+<div id="cargando" name="cargando" class="cargando" style="position: absolute; top: 35%; left: 43.5%; display: none;"><img class="spin" src="/textures/taimas.png" width="200" height="100"></div>
+    
+    <script src="/js/exoplanet.js"></script>
+    <script src="/js/buttons.js"></script>
+    <script src="/js/menu.js"></script>
+
+<script>
+    window.addEventListener('resize', updateGlobeSize);
+    updateGlobeSize();
+    Update_celular();
+</script>
+</body>
+</html>

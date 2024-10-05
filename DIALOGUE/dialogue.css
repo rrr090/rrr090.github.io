@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    background: url("/textures/background.jpg");
+    background-size: cover; /* Фон растягивается по всему экрану */
+    background-position: center; /* Центровка фона */
+    background-repeat: no-repeat; /* Фон не повторяется */
+    min-height: 100vh; /* Фон занимает всю высоту экрана */
+}
+
+#dialog-box {
+    background-color: rgba(145, 135, 135, 0.5);
+    padding: 40px; /* Увеличенный отступ */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+#dialog-text {
+    font-size: 24px; /* Увеличенный размер шрифта */
+    color: #00ffcc;
+    margin-bottom: 20px;
+}
+
+/* Стили кнопки с зелёным текстом */
+#next-btn {
+    padding: 15px 40px; /* Увеличенные отступы кнопки */
+    font-size: 18px; /* Увеличенный размер шрифта на кнопке */
+    color: #2ecc71; /* Зелёный текст */
+    background-color: transparent;
+    border: 2px solid #2ecc71; /* Зелёная обводка */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#next-btn:hover {
+    background-color: #2ecc71; /* Зелёный фон при наведении */
+    color: #fff; /* Белый текст при наведении */
+}
+
+#next-btn:active {
+    background-color: #27ae60; /* Более тёмный зелёный фон при нажатии */
+    color: #fff;
+    border-color: #27ae60;
+}

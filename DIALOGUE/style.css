@@ -1,0 +1,111 @@
+/* Сброс стандартных отступов и полей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Фон для всего экрана */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/textures/background.jpg'); /* Здесь вставь URL картинки фона */
+    background-size: cover; /* Фон растягивается по всему экрану */
+    background-position: center; /* Центровка фона */
+    background-repeat: no-repeat; /* Фон не повторяется */
+    min-height: 100vh; /* Фон занимает всю высоту экрана */
+    display: flex; /* Используем flexbox для вертикального расположения элементов */
+    flex-direction: column; /* Вертикальное направление */
+    justify-content: center; /* Центрируем элементы по вертикали */
+}
+
+
+/* Диалоговое окно */
+#dialog-box {
+    background-color: rgba(160, 136, 136, 0); /* Полупрозрачный белый фон */
+    padding: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    min-height: 300px;
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    border: 2px solid #2ecc71;
+    border-radius: 10px;
+}
+
+#dialog-text {
+    font-size: 35px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    max-width: 700px;
+    white-space: normal; /* Позволяет переносу строк */
+    word-wrap: break-word; /* Переносит длинные слова на новую строку */
+    overflow-wrap: break-word; /* Совместимость с другими браузерами */
+}
+
+/* Стили кнопки с зелёным текстом */
+#next-btn {
+    height: 30wh;
+    padding: 20px 40px;
+    font-size: 18px;
+    color: #2ecc71;
+    background-color: transparent;
+    border: 2px solid #2ecc71;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+
+
+#next-btn:hover {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+#next-btn:active {
+    background-color: #27ae60;
+    color: #fff;
+    border-color: #27ae60;
+}
+#dialog-image {
+    max-width: 100%;
+    max-height: 400px; /* Максимальная высота */
+    width: auto;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+#dialog-video {
+    max-width: 100%;
+    max-height: 400px; /* Максимальная высота */
+    width: auto;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* Персонаж в нижнем левом углу */
+#character-box {
+    position: absolute;
+    bottom: 0px; /* Отступ от нижнего края экрана */
+    left: 0px;   /* Отступ от левого края экрана */
+    padding: 0px;
+
+   
+}
+
+#character-image {
+    max-width: 700px;  /* Увеличиваем максимальную ширину */
+    height: auto;
+   
+}

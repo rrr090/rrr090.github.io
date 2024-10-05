@@ -1,0 +1,214 @@
+body {
+    margin: 0;
+    font-family: "Bebas Neue", sans-serif;
+    color: white;
+  }
+  
+ 
+  .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(25, 25, 25, 0.5);
+    color: white;
+    padding-top: 20px;
+  }
+  /* IDK */
+  .menu-header {
+    font-family: 'Rajdhani-Semibold', sans-serif;
+    font-size: 1.5rem;
+    border-bottom: 1px solid rgba(45, 45, 45, 0.8);
+    padding: 0.5rem 1rem;
+    color: white;
+  }
+  
+  .menu-list {
+    list-style: none;
+    padding: 0;
+    color: white;
+  }
+  /* SUB SUB*/
+  .menu-list a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    transition: background-color 0.3s;
+  }
+  
+  .menu-list a:hover {
+    background-color: #333;
+    color: white;
+  }
+  
+  .submenu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    color: white;
+  }
+  
+  .submenu a {
+    padding: 8px 20px;
+    display: block;
+    color: white;
+  }
+  
+  .content {
+    margin-left: 250px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: white;
+  }
+/* SUB MENU */
+.planet-name {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 0.9rem;
+    color: white;
+}
+  /* TRUE FALSE/ MENU */
+.scene-nav-menu {
+    right: 0;
+    top: 0;
+    width: 300px;
+    text-align: center;
+    color: white;
+    opacity: 0.8;
+    font-size: 30px;
+    position: absolute;
+    font-family: "Bebas Neue", sans-serif;
+    /*background: rgba(0, 0, 0, 0.7);*/
+    z-index: 30;
+    border: 1px solid rgba(45, 45, 45, 0.85);
+    margin: 0;
+  }
+  .scene-desc-menu {
+    left: 0;
+    width: 300px;
+    text-align: center;
+    color: white;
+    opacity: 0.8;
+    font-size: 30px;
+    position: left;
+    font-family: "Bebas Neue", sans-serif;
+    /*background: rgba(0, 0, 0, 0.7);*/
+    z-index: 40;
+    border: 1px solid rgba(45, 45, 45, 0.85);
+    margin: 0;
+  }
+
+
+.scene-nav-infoo {
+  right: 0;
+  top: 0;
+  width: 30%;
+  height: auto;
+  /* text-align: center; */
+  color: white;
+  opacity: 0.7;
+  font-size: 10px;
+  position: absolute;
+  font-family: "Bebas Neue", sans-serif;
+  background: rgb(21 21 21 / 56%);
+  z-index: 30;
+  border: 1px solid rgba(45, 45, 45, 0.85);
+  margin: 0;
+  }
+  .nav-info-iframe{
+    width: 100%;
+    height: 80vh;
+    max-height: 80vh;
+    color: white;
+  }
+  /* MENU */
+  .menu-title {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.5rem;
+    border-bottom: 1px solid rgba(45, 45, 45, 0.8);
+    padding: 0.5rem 1rem;
+    color: white;
+    letter-spacing: 0.02rem;
+    background: rgb(21 21 21);
+  }
+  
+  .menu li {
+    font-size: 0.925rem;
+    line-height: 2rem;
+    font-size: inherit;
+    color: white;
+  }
+  
+  .accordion-title {
+    display: block;
+    padding: 0.5rem 1rem;
+    line-height: 1;
+    font-size: 0.75rem;
+    color: white; 
+    position: relative;
+    border-bottom: 1px solid rgba(45, 45, 45, 0.8);
+  }
+  /* IQ SAT IELTS */
+  .exoplanet_table {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1rem;
+    line-height: 1rem;
+    margin-bottom: 0;
+    color: white;
+    letter-spacing: 0.02rem;
+  }
+  .accordion-content {
+    padding: 1rem;
+    display: none;
+    border-bottom: 1px solid rgba(45, 45, 45, 0.8);
+    /*background-color: rgba(25, 25, 25, 0.5);*/
+    color: white;
+  }
+  /* TAIMAS INFORMATION */
+  .menu-name {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.125rem;
+    color: white;
+  }
+
+  /* TAIMAS EXPLORATION TITLE */
+  .scene-title{
+    opacity: 1;
+    font-family: "Bebas Neue", sans-serif;
+    position: absolute;
+    top: 0;
+    padding: 20px 30px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    width: 100%;
+    text-align: left;
+    font-size: 50px;
+    transition: opacity 500ms ease-in-out;
+    background: #e7e7e700;
+    color: slategrey;
+    letter-spacing: 0.02rem;
+    -webkit-font-smoothing: antialiased;
+  }
+/*   useless rn */
+.scene-infopie{
+    opacity: 1;
+    font-family: 'Rajdhani-Semibold', sans-serif;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    transition: opacity 500ms ease-in-out;
+    background: rgba(0, 0, 0, 0);
+    color: slategrey;
+    letter-spacing: 0.02rem;
+    -webkit-font-smoothing: antialiased;
+  }
+  
