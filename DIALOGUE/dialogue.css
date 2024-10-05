@@ -12,7 +12,17 @@ body {
     min-height: 100vh; /* Фон занимает всю высоту экрана */
 }
 
+#dialog-text {
+    font-size: 24px; /* Увеличенный размер шрифта */
+    color: #00ffcc;
+    margin-bottom: 20px;
+}
 #dialog-box {
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center;     /* Центрирование по вертикали */
+    height: 100%;            /* Полная высота родительского контейнера */
+    width: 100%;             /* Полная ширина родительского контейнера */
     background-color: rgba(145, 135, 135, 0.5);
     padding: 40px; /* Увеличенный отступ */
     border-radius: 10px;
@@ -21,11 +31,12 @@ body {
     font-family: "Bebas Neue", sans-serif;
 }
 
-#dialog-text {
-    font-size: 24px; /* Увеличенный размер шрифта */
-    color: #00ffcc;
-    margin-bottom: 20px;
+#dialog-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;      /* Чтобы изображение не выходило за пределы */
 }
+
 
 /* Стили кнопки с зелёным текстом */
 #next-btn {

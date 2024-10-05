@@ -15,9 +15,6 @@ const starTypeVal = document.getElementById("exoTypeSelect");
 let contador_blink=0;
 
 
-// Configurar setInterval para llamar a la función cada 1000 milisegundos (1 segundo)
-
-//Funciones que vienen de exoplanet.js. En version futura se deberia llamar a dichas funciones en lugar de colocarlas aca.
 function ambientLightOn() {
     const directionalLight = exoplanet.scene().children.find(obj3d => obj3d.type === 'DirectionalLight');
         if (directionalLight) {
@@ -51,7 +48,7 @@ function ambientLightOFF() {
 //Fin
 
 function colorChange() {
-    // Define color stops (temperature, color)
+  
     const colorStops = [
         { temp: 0, color: '#000080' },           // Deep Blue for 0°C
         { temp: 250, color: '#007FFF' },         // Light Blue for 250°C
@@ -191,28 +188,6 @@ function updateSliders() {
 
 
 }
-//NOT READY
-//function textureChange(){
- //   var exoSkin = document.getElementById("exoTypeSelect");
-  //  if(exoSkin.value === 'terrestial'){
-   //    
-   //     exoplanet.bumpImageUrl('/textures/terrestial.jpg')
-   // }
-   // else if(exoSkin.value === 'gasGiant'){
-   //     exoplanet.bumpImageUrl('/textures/venus.jpg')
-   // }
-   // else if(exoSkin.value === 'superEarth'){
-   //     exoplanet.bumpImageUrl('/textures/earth.jpg')
-   // }
-   // else
-   // {
-   //   
-   //     exoplanet.bumpImageUrl('/textures/neptunianBase.jpg')
-   // }
-  
-//}
-
-
 
 
 // Add event listeners to each slider

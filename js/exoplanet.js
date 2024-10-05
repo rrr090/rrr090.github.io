@@ -112,11 +112,6 @@ function dayCycle(orbitSpeed) {
 }
 
 
-//    function loadTexture(){
-//    const textureLoader = new THREE.TextureLoader();
-//    const texture = textureLoader.load('/textures/venus.jpg'); 
-//    exoplanet.globeMaterial(new THREE.MeshStandardMaterial({ map: texture }));      
-//}
 
 const exoplanetContainer = document.getElementById('Exoplanet');
 const exoplanet = Globe()
