@@ -178,6 +178,6 @@ volumeSlider.addEventListener('input', function() {
     document.getElementById('volume-value').textContent = `${volumeSlider.value}%`; // Обновляем отображаемое значение громкости
 });
 
-nasa = document.getElementById('open-link').addEventListener('click', function() {
+document.getElementById('open-link').addEventListener('click', function() {
     window.open('https://www.nasa.gov', '_blank'); 
 });
