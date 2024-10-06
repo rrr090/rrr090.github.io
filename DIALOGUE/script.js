@@ -41,8 +41,9 @@ const media = [
     { type: 'video', src: '/textures/direct.mp4' },  
     { type: 'video', src: '/textures/astrometry.mp4' },
     { type: 'image', src: '/textures/gravimicro.jpg'},
-    { type: 'image', src: '/textures/exotypes.jpg'}
-    null;
+    { type: 'image', src: '/textures/exotypes.jpg'},
+     { type: 'none', src: null },
+
 ];
 
 const character = [
