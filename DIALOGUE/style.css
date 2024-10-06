@@ -5,22 +5,26 @@
     box-sizing: border-box;
 }
 
-
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
 }
+
+/* Фон для всего экрана */
 body {
-    background-image: url('/textures/background.jpg');
-    background-size: cover; /* Картинка будет масштабироваться, чтобы покрыть весь экран */
-    background-position: center; /* Центрируем изображение */
-    background-repeat: no-repeat; /* Избегаем повторения изображения */
-    height: 100vh; /* Занимаем 100% высоты экрана */
-    margin: 0;
-    font-family: Arial, sans-serif; /* Шрифт по умолчанию */
-    color: white; /* Цвет текста */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/textures/background.jpg'); /* Здесь вставь URL картинки фона */
+    background-size: cover; /* Фон растягивается по всему экрану */
+    background-position: center; /* Центровка фона */
+    background-repeat: no-repeat; /* Фон не повторяется */
+    min-height: 100vh; /* Фон занимает всю высоту экрана */
+    display: flex; /* Используем flexbox для вертикального расположения элементов */
+    flex-direction: column; /* Вертикальное направление */
+    justify-content: center; /* Центрируем элементы по вертикали */
 }
 
 /* Фон для всего экрана */
