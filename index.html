@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--Icon-->
+    <link rel="icon" href="/images/inter.ico" type="image/icon type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Style.css-->
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+    <!--Boxicon-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!--Remixicon-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet"> 
+    <!--Scroll Reveal-->
+    <script  src="https://unpkg.com/scrollreveal"></script>  
+    <!--TAIMAS--> 
+    <title>Infinity Exploration</title>
+    <!--Fire Cursor-->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+</head>
+<body>
+    <!--Custom js link-->
+    <script src = "script.js"></script>
+
+    <header>
+        <a href="#" class="logo"><img src="/images/Безымянный-6.png" alt=""></a>
+        <ul class="navlist">
+            <li><a href="#"></a>Home</li>
+        </ul>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+
+    <!--Section-->
+    <section class="hero">
+        <div class="hero-text">
+            <h5></h5>
+            <h4></h4>
+            <h1>Infinity Exploration</h1>
+            <p>At the heart of our mission lies an unwavering commitment to illuminate the cosmos and empower explorers to journey beyond our world. We strive to unravel the mysteries of exoplanets, igniting curiosity and wonder as we unveil the secrets of distant worlds. Join us in this celestial quest, where each discovery fuels the imagination and inspires a deeper connection to the universe. Together, let’s traverse the stars and chart a path toward new frontiers.</p>
+            <button id="testBtn" onclick="startExo()">Create your own exoplanet</button>
+            <button id="testBtn" onclick="startTest()">Test</button>
+            <button id="tesBtn" onclick="startGame()">Game</button>
+
+        </div>
+        <div class="hero-img">
+            <img src="/images/Безымянный-6.png" alt="">
+        </div>
+
+    </section>
+
+    <div class="icons">
+        <a href="https://www.instagram.com/nasa"><i class="ri-instagram-line"></i></a>
+        <a href="https://www.youtube.com/nasa"><i class="ri-youtube-line"></i></a>
+        <a href="#"><i class="ri-dribbble-line"></i></a>
+    </div>
+
+
+    
+    <!--Scroll reveal effect-->
+    <script>
+        ScrollReveal ({
+            reset: true,
+            distance: '65px',
+            duration: 2600,
+            delay: 450
+        });
+
+        ScrollReveal().reveal('.hero-text', {delay:200, origin: 'top'});
+        ScrollReveal().reveal('.hero-img', {delay:450, origin: 'top'});
+        ScrollReveal().reveal('.icons', {delay:500, origin: 'left'});
+        ScrollReveal().reveal('.scroll-down', {delay:500, origin: 'right'});
+    </script>
+
+
+</body>
+</html>

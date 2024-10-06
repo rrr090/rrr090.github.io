@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins%', sans-serif;
+    color: white;
+    list-style: none;
+    text-decoration: none;
+    
+}
+
+body {
+    min-height: 100vh;
+    position: relative;
+    background-image: linear-gradient(#250f4732, #1218213f), url('/images/bg.png');
+    background-size: cover;           /* Ensure the image covers the entire background */
+    background-repeat: no-repeat;     /* Don't repeat the background */
+    background-position: center;      /* Start at the center */
+    overflow: hidden;                 /* Prevent scrollbars from showing */
+
+    /* CSS animation applied to background position */
+    animation: moveBackground 20s linear infinite; /* Infinite loop, very slow */
+}
+
+/* Keyframes for smooth multi-directional background movement */
+@keyframes moveBackground {
+    0% {
+        background-position: 50% 50%; /* Start at center */
+    }
+    25% {
+        background-position: 55% 45%; /* Slightly to right and up */
+    }
+    50% {
+        background-position: 50% 40%; /* Move downwards */
+    }
+    75% {
+        background-position: 45% 45%; /* Move to left */
+    }
+    100% {
+        background-position: 50% 50%; /* Return to center */
+    }
+}
+
+
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 33px 9%;
+    background: transparent;
+    
+}
+
+.circle {
+    height: 24px;
+    width: 24px;
+    border-radius: 24px;
+    background-color: #5f75b8;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 99999999; /* so that it stays on top of all other elements */
+  }
+
+  #testBtn {
+    padding: 30px 45px;  /* Увеличиваем внутренние отступы */
+    font-size: 32px;     /* Увеличиваем размер текста */
+    font-weight: bold;   /* Делаем текст жирным */
+    color: #333;        /* Цвет текста */
+    border: none;        /* Убираем границы */
+    border-radius: 9.5px;  /* Закругляем углы */
+    cursor: pointer;     /* Меняем курсор при наведении */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Эффект при наведении */
+#testBtn:hover {
+    transform: scale(1.05);    /* Небольшое увеличение кнопки */
+}
+
+
+img {
+    width: 65px;
+    height: auto;
+}
+.navlist{
+    display: flex;
+}
+
+.navlist a{
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid white;
+    transition: all .55s ease;
+    color: white;
+
+}
+
+.navlist a:hover{
+    border-bottom: 2px solid white;
+}
+
+#menu-icon{
+    color: white;
+    font-size: 35px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+.hero{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    /*background: linear-gradient(245.59deg, #9d10f5 0%, #663ac4 28.53%, rgb(111, 1, 133) 75.52%)*/
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2rem;
+}
+section{
+    padding: 0 19%;
+}
+.hero-text h5{
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 40px;
+}
+.hero-text h1{
+    font-family: "Space Grotesk", cursive;
+    font-size: 90px;
+    line-height: white;
+    margin: 0 0 45px;
+}
+.hero-text h4{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: white;
+}
+.hero-text p{
+    font-size: 15px;
+    line-height: white;
+    line-height: 1.9;
+    margin-bottom: 40px;
+}
+
+.hero-img img{
+    width: 400px;
+    height: auto;
+
+}
+
+.hero-text button{
+    padding: 12px 40px;
+    border: none;
+    outline: none;
+    color: #FFF;
+    cursor: grab;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+}
+.hero-text button::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    cursor: grab;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+
+/* glow */
+.hero-text button::before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #FF0000, #FF7300, #FFFB00, #48FF00,
+      #00FFD5, #002BFF, #FF00C8, #FF0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height:  calc(100% + 4px);
+    filter: blur(8px);
+    cursor: grab;
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+  }
+  
+  @keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+  }
+  
+  /* hover */
+  .hero-text button:hover::before {
+    opacity: 1;
+        cursor: grab;
+  }
+  
+  .hero-text button:active:after {
+    background: transparent;
+        cursor: grab;
+  }
+  
+  .hero-text button:active {
+    color: #000;
+    font-weight: bold;
+        cursor: grab;
+  }
+
+
+
+.icons{
+    position: absolute;
+    top: 50%;
+    padding: 0 9%;
+    transform: translateY(-50%);
+}
+
+.icons i{
+    display: block;
+    margin: 26px 0;
+    font-size: 24px;
+    color: white;
+    transition: all .50s ease;
+}
+.icons i:hover{
+    color: #5f75b8;
+    transform: translateY(-5px);
+}
+.scroll-down{
+    position: absolute;
+    bottom: 6%;
+    right: 9%;
+}
+.scroll-down i{
+    display: block;
+    padding: 12px;
+    font-size: 25px;
+    color: white;
+    background: #5f75b8;
+    border-radius: 30px;
+    transition: all .50s ease;
+}
+.scroll-down i:hover{
+    transform:  translateY(-5px);
+}
+
+@media (max-width: 1535px){
+    header{
+        padding: 0 3%;
+        transition: .2s;
+    }
+    .icons{
+        padding: 0 3%;
+        transition: .2s;
+    }
+    .scroll-down{
+        right: 3%;
+        transition: .2s;
+    }
+}
+@media (max-width: 1460px){
+    section{
+        padding: 0 12%;
+        transition: .2s;
+    }
+}
+@media (max-width: 1340px){
+    .hero-img{
+        width: 100%;
+        height: auto;
+    }
+    .hero-text h1{
+        font-size: 75px;
+        margin: 0 0 30px;
+    }
+    .hero-text h5{
+        margin-bottom: 25px;
+
+    }
+}
+@media (max-width: 1195px){
+    section{
+        padding: 0 3%;
+        transition: .2s;
+    }
+    .hero-img{
+        text-align: center;
+    }
+    .hero-text{
+        padding-top: 115px;
+    }
+    .hero-img img{
+        width: 560px;
+        height: auto;
+    }
+    .hero{
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+    .icons{
+        display: none;
+    }
+    .scroll-down{
+        display: none;
+    }
+}
+@media (max-width: 990px){
+    #menu-icon{
+        display: block;
+    }
+    .navlist{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 300px;
+        height: 40vh;
+        background: #5f75b8;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 20px;
+        transition: all .55s ease;
+    }
+    .navlist a{
+        display: block;
+        margin: 7px 0;
+        margin-left: 0;
+    }
+    .navlist.open{
+        right: 0;
+    }
+}
+@media (max-width: 680px){
+    .hero-img img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+::-webkit-scrollbar{
+    width: 10px;
+
+}
+::-webkit-scrollbar-track{
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb{
+    background: #483D8B;
+    border-radius: 12px;
+    transition: all 0.3 ease;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #363ed6;
+}
+*/
