@@ -82,14 +82,16 @@ body {
     color: #2ecc71; /* Цвет ползунка */
     font-weight: bold; /* Жирный шрифт */
     margin-bottom: 5px; /* Отступ снизу */
-    text-align: left; /* Выравнивание по левому краю */
+    text-align: center; /* Выравнивание по левому краю */
+    
 }
 
 .volume-description {
     font-size: 14px; /* Размер шрифта для описания */
     color: #2ecc71; /* Цвет ползунка */
     margin-bottom: 10px; /* Отступ снизу */
-    text-align: left; /* Выравнивание по левому краю */
+    text-align: center; /* Выравнивание по левому краю */
+    
 }
 
 /* Стили ползунка громкости */
@@ -99,6 +101,12 @@ body {
     background: transparent; /* Прозрачный фон */
     outline: none; /* Убираем обводку при фокусе */
     margin-bottom: 10px; /* Отступ снизу */
+    color: #2ecc71;
+    background-color: transparent;
+    border: 2px solid #2ecc71;
+
+    border-radius: 10px;
+   
 }
 
 #volume-slider::-webkit-slider-thumb {
@@ -109,11 +117,14 @@ body {
     border-radius: 50%; /* Круглая форма */
     background: #2ecc71; /* Цвет ползунка */
     cursor: pointer; /* Курсор при наведении */
+    
+
+    
 }
 
 #volume-slider::-moz-range-thumb {
     width: 15px; /* Ширина ползунка */
-    height: 15px; /* Высота ползунка */
+    height: 30px; /* Высота ползунка */
     border-radius: 50%; /* Круглая форма */
     background: #2ecc71; /* Цвет ползунка */
     cursor: pointer; /* Курсор при наведении */
@@ -121,21 +132,24 @@ body {
 
 /* Стили для кнопки */
 .music-toggle {
-    width: 100%; /* Ширина кнопки 100% от контейнера */
-    padding: 10px;
-    font-size: 16px;
+    height: 30wh;
+    padding: 13px 40px;
+    font-size: 18px;
     color: #2ecc71;
     background-color: transparent;
     border: 2px solid #2ecc71;
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
-    opacity: 0.8;
-    text-align: center; /* Центрирование текста */
-    margin-top: 15px; /* Увеличиваем отступ сверху */
+}
+.music-toggle:active {
+    background-color: #27ae60;
+    color: #fff;
+    border-color: #27ae60;
 }
 .music-toggle:hover {
-    opacity: 1;
+    background-color: #2ecc71;
+    color: #fff;
 }
 
 /* Убираем стиль ползунка при фокусе */
@@ -147,8 +161,10 @@ body {
 #volume-value {
     font-size: 14px; /* Размер шрифта */
     color: #2ecc71; /* Цвет ползунка */
-    text-align: left; /* Выравнивание по левому краю */
+    text-align: center; /* Выравнивание по левому краю */
     margin-bottom: 10px; /* Отступ снизу */
+    height: 80px;
+
 }
 #next-btn:hover {
     background-color: #2ecc71;
@@ -179,16 +195,45 @@ body {
 
 /* Персонаж в нижнем левом углу */
 #character-box {
+    position: relative; /* Устанавливаем позиционирование для z-index */
+    z-index: 40; /* Устанавливаем высокий z-index */
     position: absolute;
-    bottom: 0px; /* Отступ от нижнего края экрана */
-    left: 0px;   /* Отступ от левого края экрана */
+    bottom: 120px; 
+    left: 20px;   
     padding: 0px;
 
    
-}
+} 
 
 #character-image {
+    position: relative; /* Устанавливаем позиционирование для z-index */
+    z-index: 40; /* Устанавливаем высокий z-index */
     max-width: 700px;  /* Увеличиваем максимальную ширину */
     height: auto;
    
+}
+.button {
+    height: 30wh;
+    padding: 20px 40px;
+    font-size: 18px;
+    color: #2ecc71;
+    background-color: transparent;
+    border: 2px solid #2ecc71;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    position: relative; /* Устанавливаем позиционирование для z-index */
+    z-index: 100; /* Устанавливаем высокий z-index */
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+.button:active {
+    background-color: #27ae60;
+    color: #fff;
+    border-color: #27ae60;
 }

@@ -9,6 +9,7 @@ const audio = document.getElementById('background-music'); // Получаем �
 const musicToggle = document.getElementById('music-toggle'); // Получаем кнопку
 const musicStatus = document.getElementById('music-status'); // Получаем текст статуса музыки
 const volumeSlider = document.getElementById('volume-slider'); // Получаем ползунок громкости
+const nasa = document.getElementById('open-link');
 
 
 // Массив с фразами диалога
@@ -170,3 +171,6 @@ volumeSlider.addEventListener('input', function() {
     document.getElementById('volume-value').textContent = `${volumeSlider.value}%`; // Обновляем отображаемое значение громкости
 });
 
+nasa = document.getElementById('open-link').addEventListener('click', function() {
+    window.open('https://www.nasa.gov', '_blank'); 
+});
