@@ -75,7 +75,7 @@ function updateSection() {
         document.getElementById('prevBtn').addEventListener('click', function() {
           if (currentSection === 0) {
               // Redirect to main.html if we are on the first section
-              window.location.href = "main.html"; // Change to the correct path if necessary
+              window.location.href = "/nasabek/main.html"; // Change to the correct path if necessary
           } else {
               if (currentSection > 0) {
                   currentSection--;
@@ -85,7 +85,7 @@ function updateSection() {
       });
 // Функция для начала теста - переход на другую страницу
 function startTest() {
-    window.location.href = "/test/test.html"; // Ссылка на новую страницу с тестом
+    window.location.href = "nasabek/test/test.html"; // Ссылка на новую страницу с тестом
 }
 
 // Изначальная загрузка страницы - обновляем секции
