@@ -25,6 +25,7 @@ const dialogues = [
     "Direct imaging method, 82 exoplanet were discovered by this method",
     "Astronometry method, only 3 planets were discovered by this method",
     "And last method - Gravitational microlensing, 225 exoplanets were unveiled using this method",
+    "In conclusion, scientists divided all Exoplanets to the 4 types: Gas giants, Terrestial, Super-Earths and Neptunian"
 ];
 
 // Массив с изображениями и видео (для определенных диалогов)
@@ -40,7 +41,8 @@ const media = [
     { type: 'video', src: '/textures/radial.mp4' },  
     { type: 'video', src: '/textures/direct.mp4' },  
     { type: 'video', src: '/textures/astrometry.mp4' },
-    { type: 'image', src: '/textures/gravimicro.jpg'}
+    { type: 'image', src: '/textures/gravimicro.jpg'},
+    { type: 'image', src: '/textures/exotypes.jpg'}
 ];
 
 const character = [
