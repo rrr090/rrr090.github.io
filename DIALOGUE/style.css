@@ -48,7 +48,7 @@ body {
 
 /* Диалоговое окно */
 #dialog-box {
-    background-color: rgba(160, 136, 136, 0); /* Полупрозрачный белый фон */
+     background-color: rgba(57, 6, 77, 0.5); /* Полупрозрачный белый фон */
     padding: 40px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 800px;
