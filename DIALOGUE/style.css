@@ -13,7 +13,7 @@ html, body {
     font-family: Arial, sans-serif;
 }
 body {
-    background-image: url('/texture/background.jpg');
+    background-image: url('/textures/background.jpg');
     background-size: cover; /* Картинка будет масштабироваться, чтобы покрыть весь экран */
     background-position: center; /* Центрируем изображение */
     background-repeat: no-repeat; /* Избегаем повторения изображения */
