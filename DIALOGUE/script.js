@@ -100,7 +100,7 @@ function showNextDialogue() {
             nextButton.style.display = 'none'; // Скрываем кнопку после завершения диалога
             dialogText.textContent = "Prepare for the cutting-edge adventure to the end of the galaxy!";
             setTimeout(() => {
-                window.location.href='/site/work.html';
+                window.location.href='/nasabek/index.html';
             }, 1500);
         }
     }
