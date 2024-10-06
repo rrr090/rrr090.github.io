@@ -14,17 +14,35 @@ html, body {
 
 /* Фон для всего экрана */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url('/textures/background.jpg'); /* Здесь вставь URL картинки фона */
-    background-size: cover; /* Фон растягивается по всему экрану */
-    background-position: center; /* Центровка фона */
-    background-repeat: no-repeat; /* Фон не повторяется */
-    min-height: 100vh; /* Фон занимает всю высоту экрана */
-    display: flex; /* Используем flexbox для вертикального расположения элементов */
-    flex-direction: column; /* Вертикальное направление */
-    justify-content: center; /* Центрируем элементы по вертикали */
+    min-height: 100vh;
+    position: relative;
+    background-image: linear-gradient(#250f4732, #1218213f), url('/textures/background.jpg');
+    background-size: cover;           /* Ensure the image covers the entire background */
+    background-repeat: no-repeat;     /* Don't repeat the background */
+    background-position: center;      /* Start at the center */
+    overflow: hidden;                 /* Prevent scrollbars from showing */
+
+    /* CSS animation applied to background position */
+    animation: moveBackground 20s linear infinite; /* Infinite loop, very slow */
+}
+
+/* Keyframes for smooth multi-directional background movement */
+@keyframes moveBackground {
+    0% {
+        background-position: 50% 50%; /* Start at center */
+    }
+    25% {
+        background-position: 55% 45%; /* Slightly to right and up */
+    }
+    50% {
+        background-position: 50% 40%; /* Move downwards */
+    }
+    75% {
+        background-position: 45% 45%; /* Move to left */
+    }
+    100% {
+        background-position: 50% 50%; /* Return to center */
+    }
 }
 
 
