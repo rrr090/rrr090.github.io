@@ -14,27 +14,32 @@ const nasa = document.getElementById('open-link');
 
 // Массив с фразами диалога
 const dialogues = [
-    "What do you know about exoplanets???",
-    "Do you know what they are?",
-    "What Is the Habitable Zone?",
+    "What do you know about exoplanets?",
+    "My name is xXx and I am your on-board c0mputer that will guide you through this adventure",
+    "There are innumerable amount of Exoplanets in space, which means that some of them can be habitable for humanity",
+    'The habitable exoplanet should be in the "Habitable Zone"',
     "For a planet, the habitable zone is the distance from a star that allows liquid water to persist on its surface – as long as that planet has a suitable atmosphere.",
-    "transit method",
-    "radial velocity method",
-    "direct imaging method",
-    "astronometry method",
-    "gravitational microlensing",
+    "In order to find all of the secrets of the space humanity came up with 5 main methods of finding Exoplanets",
+    "Transit method, the most valuable one, because of its efficiency, 4295 planets were unveiled using this method",
+    "Radial velocity method 1092 planets were discovered using this method",
+    "Direct imaging method, 82 exoplanet were discovered by this method",
+    "Astronometry method, only 3 planets were discovered by this method",
+    "And last method - Gravitational microlensing, 225 exoplanets were unveiled using this method",
 ];
 
 // Массив с изображениями и видео (для определенных диалогов)
 const media = [
-    { type: 'none', src: null },  // Для первых трёх диалогов нет медиа
+    { type: 'none', src: null },  
     { type: 'none', src: null },
     { type: 'none', src: null },
-    { type: 'image', src: '/textures/habitatable.jpg' },  // Видео появится на 4 строке
-    { type: 'video', src: '/textures/transit.mp4' },  // Картинка на 5 строке
-    { type: 'video', src: '/textures/radial.mp4' },  // Видео на 6 строке
-    { type: 'video', src: '/textures/direct.mp4' },  // Картинка на 7 строке
-    { type: 'video', src: '/textures/astrometry.mp4' },  // Картинка на 8 строке
+    { type: 'none', src: null },
+    { type: 'none', src: null },
+
+    { type: 'image', src: '/textures/habitatable.jpg' },  
+    { type: 'video', src: '/textures/transit.mp4' },  
+    { type: 'video', src: '/textures/radial.mp4' },  
+    { type: 'video', src: '/textures/direct.mp4' },  
+    { type: 'video', src: '/textures/astrometry.mp4' },
     { type: 'image', src: '/textures/gravimicro.jpg'}
 ];
 
