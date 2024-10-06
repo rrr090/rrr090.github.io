@@ -222,7 +222,18 @@ starTypeVal.addEventListener("input",() =>{
     updateGlobeImageUrl();
 
 })
+let loadingIndex = 0;
+const loadingText = document.getElementById('loading-text');
+const loadingStates = ["Loading", "Loading.", "Loading..", "Loading..."];
 
+// Функция для смены текста
+function updateLoadingText() {
+    loadingText.textContent = loadingStates[loadingIndex];
+    loadingIndex = (loadingIndex + 1) % loadingStates.length; // Циклически обновляем индекс
+}
+
+// Обновляем текст каждые 500 мс
+setInterval(updateLoadingText, 500);
 
 
 // Call the function initially to set the initial displayed date and background color

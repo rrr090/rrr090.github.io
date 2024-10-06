@@ -126,23 +126,6 @@ sliderRotation.addEventListener("input", () => {
 });
 
 
-
-
-// NOT DONE
-
-     // Gen random data
-     const N = 300;
-     const gData = [...Array(N).keys()].map(() => ({
-       lat: (Math.random() - 0.5) * 180,
-       lng: (Math.random() - 0.5) * 360,
-       alt: Math.random() * 0.8 + 0.1,
-       radius: Math.random() * 5,
-       color: ['red', 'white', 'blue', 'green'][Math.round(Math.random() * 3)]
-     }));
-exoplanet.pointOfView({altitude: 2.5}) //2.5 default
-exoplanet.bumpImageUrl('/textures/ceres3.jpg')
-exoplanet.globeImageUrl('/textures/terrestial.jpg')
-
 // Function to update Rotation
 function updateRotation() {
     let Rotation = sliderRotation.value;
