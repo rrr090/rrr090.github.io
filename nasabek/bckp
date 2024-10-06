@@ -1,0 +1,122 @@
+
+.accordion{
+    max-width: 500px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, #06060660, #00000000);
+
+}
+.accordion__label, 
+.accordion__content{
+    padding: 14px 25px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.accordion__label{
+    display: block;
+    width: 225px;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.1s;
+}
+
+.accordion__label:hover{
+    background: rgba(0, 0, 0, 0.1);;
+}
+.accordion__label::after{
+    content: "";
+    position: absolute;
+    top: 45%;
+    right: 20px;
+    transform: tranlateY(-50%);
+    width: 12px;
+    height: 6px;
+    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:%23FFFFFF;" /></svg>');
+    background-size: contain;
+    transition: transform 0.4s;
+
+}
+
+
+.accordion__content {
+    background: #00000000;
+    line-height: 1.6;
+    font-size: 0.85em;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    display: none;
+}
+  
+.accordion__input {
+    display: none;
+}
+  
+.accordion__input:checked ~ .accordion__content {
+    display: block;
+}
+  
+.accordion__input:checked ~ .accordion__label::after {
+    transform: translateY(-0%) rotate(0.5turn);
+}
+.accordion__input {
+    display: none; /* Hide the input */
+}
+.accordion__input:checked + .accordion__label + .accordion__content {
+    display: block; /* Show content when input is checked */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section style="--clr: url('assets/images/bg1.jpg');">
+<img src="/assets/images/p1.gif" alt="Image 1">
+<div class="text-block-left">
+    <div class="accordion">
+        <div>
+            <input type="radio" name="Infobek" id="infosection" class="accordion__input">
+            <label for="infosection" class="accordion__label">Info about planet</label>
+            <div class="accordion__content">
+                <p>Info about planet</p>
+                <p>
+                    For a planet, the habitable zone is the distance from a star that allows liquid water to persist on its surface – as long as that planet has a suitable atmosphere.
+                    In our solar system, Earth sits comfortably inside the Sun’s habitable zone. Broiling planet Venus is within the inner edge, while refrigerated Mars is near the outer boundary.
+                    For larger, hotter stars, the zone is farther away; for smaller, cooler stars, it can be very close indeed. Finding these “just right” planets in the habitable zone is one of the keys to finding signs of life.
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<div class="text-block-right">Text for Section 1 (Right)</div>
+<div class="content">
+    <h2>Section 1</h2>
+</div>
+</section>
