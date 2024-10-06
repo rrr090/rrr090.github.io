@@ -35,7 +35,6 @@ const media = [
     { type: 'none', src: null },
     { type: 'none', src: null },
     { type: 'none', src: null },
-
     { type: 'image', src: '/textures/habitatable.jpg' },  
     { type: 'video', src: '/textures/transit.mp4' },  
     { type: 'video', src: '/textures/radial.mp4' },  
