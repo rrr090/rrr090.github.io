@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+}
+#wrapper {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url("hero-img.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    padding: 12px 40px;
+    border: none;
+    outline: none;
+    color: #333;
+    cursor: grab;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+}
+button::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    cursor: grab;
+    height: 100%;
+    background-color: #ffffff;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+
+button::before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #FF0000, #FF7300, #FFFB00, #48FF00,
+      #00FFD5, #002BFF, #FF00C8, #FF0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height:  calc(100% + 4px);
+    filter: blur(8px);
+    cursor: grab;
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+}
+  
+@keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+}
+  
+  /* hover */
+button:hover::before {
+    opacity: 1;
+    cursor: grab;
+}
+  
+button:active:after {
+    background: transparent;
+        cursor: grab;
+}
+  
+button:active {
+    color: #000;
+    font-weight: bold;
+        cursor: grab;
+}
+
+.quiz {
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    display: none; /* Hide quiz by default */
+    width: 80%;
+    max-width: 600px;
+}
+.options {
+    display: block;
+    margin: 10px 0;
+    font-size: 20px;
+    text-align: left;
+    position: relative;
+}
+input[type="radio"] {
+    display: none; /* Hide original radio buttons */
+}
+input[type="radio"] + label {
+    padding: 10px 20px;
+    border: 2px solid #FF9933;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+    width: calc(100% - 44px);
+    margin: 5px 0;
+}
+input[type="radio"]:checked + label {
+    background-color: #FF9933;
+    color: white;
+}
+.submit-answer, .view-results, #restart {
+    background-color: white;
+    border: 2px solid #e29c11;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: monospace;
+    transition: background-color 0.3s, color 0.2s;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.submit-answer:hover, #restart:hover {
+    background-color: #FF9933;
+    color: #fff;
+}
+.final-result {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+}
