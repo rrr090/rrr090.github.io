@@ -15,12 +15,12 @@ const nasa = document.getElementById('open-link');
 // Массив с фразами диалога
 const dialogues = [
     "What do you know about exoplanets?",
-    "My name is xXx and I am your on-board c0mputer that will guide you through this adventure",
+    "My name is Nasabek and I am your on-board computer that will guide you through this adventure",
     "There are innumerable amount of Exoplanets in space, which means that some of them can be habitable for humanity",
     'The habitable exoplanet should be in the "Habitable Zone"',
     "For a planet, the habitable zone is the distance from a star that allows liquid water to persist on its surface – as long as that planet has a suitable atmosphere.",
     "In order to find all of the secrets of the space humanity came up with 5 main methods of finding Exoplanets",
-    "Transit method, the most valuable one, because of its efficiency, 4295 planets were unveiled using this method",
+    'When an exoplanet passes in front of a star, it blocks out some of the light, like a solar eclipse. We call that “transit!” The more light that is blocked from a star, the bigger the planet. Scientists can use this information to learn about the type of exoplanet that is discovered.',
     "Radial velocity method 1092 planets were discovered using this method",
     "Direct imaging method, 82 exoplanet were discovered by this method",
     "Astronometry method, only 3 planets were discovered by this method",
