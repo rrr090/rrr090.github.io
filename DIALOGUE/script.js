@@ -34,7 +34,7 @@ const media = [
     { type: 'none', src: null },
     { type: 'none', src: null },
     { type: 'none', src: null },
-    { type: 'none', src: null },
+
     { type: 'image', src: '/textures/habitatable.jpg' },  
     { type: 'video', src: '/textures/transit.mp4' },  
     { type: 'video', src: '/textures/radial.mp4' },  
@@ -42,6 +42,7 @@ const media = [
     { type: 'video', src: '/textures/astrometry.mp4' },
     { type: 'image', src: '/textures/gravimicro.jpg'},
     { type: 'image', src: '/textures/exotypes.jpg'}
+    null;
 ];
 
 const character = [
